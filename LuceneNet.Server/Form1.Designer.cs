@@ -1,4 +1,4 @@
-﻿namespace LuceneNet.Client
+﻿namespace LuceneNet.Server
 {
     partial class Form1
     {

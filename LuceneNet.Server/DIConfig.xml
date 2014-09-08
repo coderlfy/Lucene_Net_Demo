@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<objects xmlns="http://www.springframework.net"
+         xmlns:db="http://www.springframework.net/database">
+<!--spring dao starting-->
+<object id="tFileContentDao" type="LuceneNet.Dao.TFileContentDao, LuceneNet.Dao">
+    <property name="AdoTemplate" ref="adoTemplate"/>
+  </object>
+<object id="tFileDao" type="LuceneNet.Dao.TFileDao, LuceneNet.Dao">
+    <property name="AdoTemplate" ref="adoTemplate"/>
+  </object>
+
+<!--spring dao end-->
+
+<!--spring service starting-->
+<object id="tFileContentService" type="LuceneNet.Service.TFileContentService, LuceneNet.Service">
+    <property name="_TFileContentDao" ref="tFileContentDao"/>
+  </object>
+<object id="tFileService" type="LuceneNet.Service.TFileService, LuceneNet.Service">
+    <property name="_TFileDao" ref="tFileDao"/>
+  </object>
+
+<!--spring service end-->
+</objects>
+

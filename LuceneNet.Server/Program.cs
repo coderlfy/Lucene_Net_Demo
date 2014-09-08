@@ -1,10 +1,9 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace LuceneNet.Client
+namespace LuceneNet.Server
 {
     static class Program
     {
@@ -16,7 +15,7 @@ namespace LuceneNet.Client
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new frmMain());
+            Application.Run(new Form1());
         }
     }
 }
