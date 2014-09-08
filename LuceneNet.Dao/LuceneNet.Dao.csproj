@@ -1,10 +1,10 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{d0128b6a-9d0e-4fe6-98e0-8fd2258d7c1b}</ProjectGuid>
+    <ProjectGuid>{D0128B6A-9D0E-4FE6-98E0-8FD2258D7C1B}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>LuceneNet.Dao</RootNamespace>
@@ -30,6 +30,12 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Spring.Core">
+      <HintPath>..\ReferenceLibrary\Spring.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="Spring.Data">
+      <HintPath>..\ReferenceLibrary\Spring.Data.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
@@ -39,21 +45,27 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-<Compile Include="TFileContentDao.cs" />
-<Compile Include="TFileDao.cs" />
-
+    <Compile Include="TFileContentDao.cs" />
+    <Compile Include="TFileDao.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-<ProjectReference Include="..\LuceneNet.IDao\LuceneNet.IDao.csproj">
-          <Project>{b1112890-057e-426e-a77b-4f2380678d70}</Project>
-          <Name>LuceneNet.IDao</Name>
-        </ProjectReference>
-<ProjectReference Include="..\LuceneNet.Model\LuceneNet.Model.csproj">
-          <Project>{63d8c7e9-ea80-4c39-8dfe-3e1a329878fc}</Project>
-          <Name>LuceneNet.Model</Name>
-        </ProjectReference>
+    <ProjectReference Include="..\CustomSpring.Core\CustomSpring.Core.csproj">
+      <Project>{4de64906-b976-4de5-a7d3-35772dd086c1}</Project>
+      <Name>CustomSpring.Core</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Foundation.Core\Foundation.Core.csproj">
+      <Project>{398b7fee-94cd-4f66-a5b4-180f8e443c83}</Project>
+      <Name>Foundation.Core</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\LuceneNet.IDao\LuceneNet.IDao.csproj">
+      <Project>{b1112890-057e-426e-a77b-4f2380678d70}</Project>
+      <Name>LuceneNet.IDao</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\LuceneNet.Model\LuceneNet.Model.csproj">
+      <Project>{63d8c7e9-ea80-4c39-8dfe-3e1a329878fc}</Project>
+      <Name>LuceneNet.Model</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
-

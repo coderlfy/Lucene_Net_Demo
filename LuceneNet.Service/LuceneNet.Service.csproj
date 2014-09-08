@@ -1,10 +1,10 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{17bdd474-7753-488f-b8c4-e010f40c8cba}</ProjectGuid>
+    <ProjectGuid>{17BDD474-7753-488F-B8C4-E010F40C8CBA}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>LuceneNet.Service</RootNamespace>
@@ -39,25 +39,27 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-<Compile Include="TFileContentService.cs" />
-<Compile Include="TFileService.cs" />
-
+    <Compile Include="TFileContentService.cs" />
+    <Compile Include="TFileService.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-<ProjectReference Include="..\LuceneNet.IDao\LuceneNet.IDao.csproj">
-          <Project>{b1112890-057e-426e-a77b-4f2380678d70}</Project>
-          <Name>LuceneNet.IDao</Name>
-        </ProjectReference>
-<ProjectReference Include="..\LuceneNet.IService\LuceneNet.IService.csproj">
-          <Project>{bfa793e0-9f45-4484-b021-06a6f12e7685}</Project>
-          <Name>LuceneNet.IService</Name>
-        </ProjectReference>
-<ProjectReference Include="..\LuceneNet.Model\LuceneNet.Model.csproj">
-          <Project>{63d8c7e9-ea80-4c39-8dfe-3e1a329878fc}</Project>
-          <Name>LuceneNet.Model</Name>
-        </ProjectReference>
+    <ProjectReference Include="..\Foundation.Core\Foundation.Core.csproj">
+      <Project>{398b7fee-94cd-4f66-a5b4-180f8e443c83}</Project>
+      <Name>Foundation.Core</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\LuceneNet.IDao\LuceneNet.IDao.csproj">
+      <Project>{b1112890-057e-426e-a77b-4f2380678d70}</Project>
+      <Name>LuceneNet.IDao</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\LuceneNet.IService\LuceneNet.IService.csproj">
+      <Project>{bfa793e0-9f45-4484-b021-06a6f12e7685}</Project>
+      <Name>LuceneNet.IService</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\LuceneNet.Model\LuceneNet.Model.csproj">
+      <Project>{63d8c7e9-ea80-4c39-8dfe-3e1a329878fc}</Project>
+      <Name>LuceneNet.Model</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
-

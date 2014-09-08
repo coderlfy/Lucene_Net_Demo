@@ -1,10 +1,10 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{b1112890-057e-426e-a77b-4f2380678d70}</ProjectGuid>
+    <ProjectGuid>{B1112890-057E-426E-A77B-4F2380678D70}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>LuceneNet.IDao</RootNamespace>
@@ -39,17 +39,19 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-<Compile Include="ITFileContentDao.cs" />
-<Compile Include="ITFileDao.cs" />
-
+    <Compile Include="ITFileContentDao.cs" />
+    <Compile Include="ITFileDao.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-<ProjectReference Include="..\LuceneNet.Model\LuceneNet.Model.csproj">
-          <Project>{63d8c7e9-ea80-4c39-8dfe-3e1a329878fc}</Project>
-          <Name>LuceneNet.Model</Name>
-        </ProjectReference>
+    <ProjectReference Include="..\Foundation.Core\Foundation.Core.csproj">
+      <Project>{398b7fee-94cd-4f66-a5b4-180f8e443c83}</Project>
+      <Name>Foundation.Core</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\LuceneNet.Model\LuceneNet.Model.csproj">
+      <Project>{63d8c7e9-ea80-4c39-8dfe-3e1a329878fc}</Project>
+      <Name>LuceneNet.Model</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
-
