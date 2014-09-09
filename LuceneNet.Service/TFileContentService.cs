@@ -16,7 +16,7 @@ using System.Collections.Generic;
 
 namespace LuceneNet.Service
 {
-    class TFileContentService : ITFileContentService
+    public class TFileContentService : ITFileContentService
     {
         public ITFileContentDao _TFileContentDao { get; set; }
 

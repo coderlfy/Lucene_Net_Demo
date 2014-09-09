@@ -52,7 +52,7 @@ namespace LuceneNet.Model
         {
             #region
             DataTable dt = new DataTable(TFile);
-			dt.Columns.Add(fid, typeof(System.Object));
+			dt.Columns.Add(fid, typeof(System.Guid));
 			dt.Columns.Add(title, typeof(System.String));
 			dt.Columns.Add(filename, typeof(System.String));
 			dt.Columns.Add(writetime, typeof(System.DateTime));

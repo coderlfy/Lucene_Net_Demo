@@ -40,6 +40,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="ITFileContentService.cs" />
+    <Compile Include="ITFileOperate.cs" />
     <Compile Include="ITFileService.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

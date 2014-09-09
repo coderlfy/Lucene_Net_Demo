@@ -44,7 +44,7 @@ namespace LuceneNet.Model
         {
             #region
             DataTable dt = new DataTable(TFileContent);
-			dt.Columns.Add(fid, typeof(System.Object));
+			dt.Columns.Add(fid, typeof(System.Guid));
 			dt.Columns.Add(fileContent, typeof(System.Object));
             dt.PrimaryKey = new DataColumn[1] { dt.Columns[fid] };
             dt.TableName = TFileContent;
