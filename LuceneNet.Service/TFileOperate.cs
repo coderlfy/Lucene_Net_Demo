@@ -112,9 +112,9 @@ namespace LuceneNet.Service
                 _tFiles = new List<EntityTFile>();
 
             EntityTFile tfile = new EntityTFile();
-            tfile.fid = Guid.NewGuid().ToString().ToLower();
-            tfile.filename = string.Format("{0}.txt", tfile.fid); ;
-            tfile.title = tfile.fid;
+            tfile.fid = Guid.NewGuid().ToString();
+            tfile.filename = string.Format("{0}.txt", tfile.fid.ToUpper()); ;
+            tfile.title = tfile.fid.ToUpper();
             tfile.writetime = DateTime.Now.ToString();
 
             _tFiles.Add(tfile);
@@ -135,7 +135,7 @@ namespace LuceneNet.Service
                 this._tFileContents = new List<EntityTFileContent>();
 
             EntityTFileContent tfilecontent = new EntityTFileContent();
-            tfilecontent.fid = tfile.fid;
+            tfilecontent.fid = tfile.fid.ToUpper();
             tfilecontent.fileContent = content.ToString();
             _tFileContents.Add(tfilecontent);
             #endregion

@@ -1,4 +1,5 @@
-﻿using LuceneNet.Service;
+﻿using CustomSpring.Core;
+using LuceneNet.Service;
 using NUnit.Framework;
 using System;
 using System.Collections.Generic;
@@ -9,6 +10,37 @@ namespace LuceneNet.ServiceTest
 {
     class ExtLuceneTest
     {
+        private ExtLucene _lucene = null;
+        [SetUp]
+        public void Setup()
+        {
+            #region
+            if (_lucene == null)
+                _lucene = new ExtLucene();
+
+            _lucene._tFileContentService = 
+                (TFileContentService)SpringManager.GetObject(
+                SpringKeys.TFileContentService);
+            #endregion
+        }
+        [Test]
+        public void Test_CreateIndex()
+        {
+            _lucene.CreateRamDirectory();
+        }
+        [Test]
+        public void Test_Query_Duanyu()
+        {
+            _lucene.CreateRamDirectory();
+            _lucene.Search("段誉");
+        }
+        [Test]
+        public void Test_Query_Wangyuyan()
+        {
+            _lucene.CreateRamDirectory();
+            _lucene.Search("王语嫣");
+        }
+        /*
         /// <summary>
         /// 测试空字符串的查询
         /// </summary>
@@ -59,5 +91,6 @@ namespace LuceneNet.ServiceTest
             lucene.CreateRamDirectory();
             lucene.Search("learn");
         }
+         * */
     }
 }

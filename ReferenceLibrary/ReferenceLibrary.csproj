@@ -46,6 +46,8 @@
     <Content Include="DevExpress.OfficeSkins.v10.2.dll" />
     <Content Include="Lucene.Net.dll" />
     <Content Include="nunit.framework.dll" />
+    <Content Include="PanGu.dll" />
+    <Content Include="PanGu.Lucene.Analyzer.dll" />
     <Content Include="Spring.Aop.dll" />
     <Content Include="Spring.Core.dll" />
     <Content Include="Spring.Data.dll" />

@@ -112,7 +112,7 @@ namespace LuceneNet.Service
             #endregion
         }
         #endregion
-        
+
         
     }
 }

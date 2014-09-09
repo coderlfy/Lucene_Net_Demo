@@ -1,4 +1,5 @@
 
+using Foundation.Core;
 /****************************************
 ***生成器版本：V2.0
 ***创建人：李峰艳
@@ -112,8 +113,32 @@ namespace LuceneNet.Service
             #endregion
         }
         #endregion
-        
-        
+
+        public TFileContentData GetTFileContentData(
+            EntityTFileContent tFileContent,
+            QueryCondition condition)
+        {
+            TFileContentData ds = null;
+
+            if (condition == null)
+                condition = new QueryCondition();
+
+            /*
+            condition._DBContainer.AddAndCondition(
+                OfficeDocumentTemplateData.templateId,
+                EnumCondition.Equal,
+                officeDocumentTemplate.templateId,
+                EnumSqlType.tinyint);
+
+            condition._DBContainer.AddAndCondition(
+                OfficeDocumentTemplateData.templateName,
+                EnumCondition.LikeBoth,
+                officeDocumentTemplate.templateName,
+                EnumSqlType.nvarchar);
+            */
+            ds = _TFileContentDao.SelectSingleT(condition);
+            return ds;
+        }
     }
 }
 
