@@ -32,7 +32,7 @@ namespace LuceneNet.ServiceTest
         public void Test_Query_Duanyu()
         {
             _lucene.CreateRamDirectory();
-            _lucene.Search("段誉");
+            _lucene.Search("山西");
         }
         [Test]
         public void Test_Query_Wangyuyan()

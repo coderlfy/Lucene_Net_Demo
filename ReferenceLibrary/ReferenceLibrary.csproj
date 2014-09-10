@@ -51,6 +51,29 @@
     <Content Include="Spring.Aop.dll" />
     <Content Include="Spring.Core.dll" />
     <Content Include="Spring.Data.dll" />
+    <Content Include="tools\PanGu Analysis\CustomRuleExample.dll" />
+    <Content Include="tools\PanGu Analysis\CustomRuleExample.pdb" />
+    <Content Include="tools\PanGu Analysis\Demo.exe" />
+    <Content Include="tools\PanGu Analysis\Demo.pdb" />
+    <Content Include="tools\PanGu Analysis\DictManage.exe" />
+    <Content Include="tools\PanGu Analysis\DictManage.pdb" />
+    <Content Include="tools\PanGu Analysis\dict\ChsDoubleName1.txt" />
+    <Content Include="tools\PanGu Analysis\dict\ChsDoubleName2.txt" />
+    <Content Include="tools\PanGu Analysis\dict\ChsSingleName.txt" />
+    <Content Include="tools\PanGu Analysis\dict\Stopword.txt" />
+    <Content Include="tools\PanGu Analysis\dict\Synonym.txt" />
+    <Content Include="tools\PanGu Analysis\dict\Wildcard.txt" />
+    <Content Include="tools\PanGu Analysis\PanGu.dll" />
+    <Content Include="tools\PanGu Analysis\PanGu.HighLight.dll" />
+    <Content Include="tools\PanGu Analysis\PanGu.HighLight.pdb" />
+    <Content Include="tools\PanGu Analysis\PanGu.pdb" />
+    <Content Include="tools\PanGu Analysis\PosDisplayCtrl.dll" />
+    <Content Include="tools\PanGu Analysis\PosDisplayCtrl.pdb" />
+  </ItemGroup>
+  <ItemGroup />
+  <ItemGroup>
+    <None Include="docs\PanGu Mannual.doc" />
+    <None Include="tools\PanGu Analysis\dict\Dict.dct" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
