@@ -1,0 +1,12 @@
+﻿select * from dbo.TFile 
+
+select * from dbo.TFileContent
+
+delete from dbo.TFile
+delete from dbo.TFileContent
+
+select * from TFileContent where fid = '2a9457a9-7343-445d-9cb2-e1091c8a3228'
+
+select a.writetime, b.fileContent from dbo.TFile a inner join 
+ dbo.TFileContent b on a.fid = b.fid where a.fid = '41CDC6F5-72E1-464E-BFE8-68F4EF5C74DF'
+ order by a.writetime desc

@@ -81,7 +81,7 @@ namespace LuceneNet.Service
             Console.WriteLine("总共花费 {0} 毫秒，检索到 {1} 条记录。", st.ElapsedMilliseconds, rs.totalHits);  
             for (int i = 0; i < rs.scoreDocs.Length; i++) {  
                 Document firstHit = searcher.Doc(rs.scoreDocs[i].doc);
-                Console.WriteLine("name: {0}", firstHit.GetField(TFileContentData.fid));  
+                Console.WriteLine("name: {0}", firstHit.GetField(TFileContentData.fid).StringValue());  
             }
             Console.WriteLine("*****************检索结束**********************");  
             #endregion
