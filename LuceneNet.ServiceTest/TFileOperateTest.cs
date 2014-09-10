@@ -11,28 +11,33 @@ namespace LuceneNet.ServiceTest
 {
     class TFileOperateTest
     {
+        private TFileOperate _fileOp = null;
+        [SetUp]
+        public void Setup()
+        { 
+            if(_fileOp == null)
+                _fileOp = new TFileOperate();
+
+            _fileOp._tFileContentService = (TFileContentService)SpringManager.GetObject(SpringKeys.TFileContentService);
+            _fileOp._tFileService = (TFileService)SpringManager.GetObject(SpringKeys.TFileService);
+        }
         /// <summary>
         /// 测试空字符串的查询
         /// </summary>
         [Test]
         public void TestCreateSimulateData_Lianchengjue()
         {
-            TFileOperate fileop = new TFileOperate();
-            fileop._tFileContentService = (TFileContentService)SpringManager.GetObject(SpringKeys.TFileContentService);
-            fileop._tFileService = (TFileService)SpringManager.GetObject(SpringKeys.TFileService);
-
-
-            fileop.CreateData("lianchengjue.txt", 20, 2);
+            _fileOp.CreateData("lianchengjue.txt", 20, 2);
         }
         [Test]
         public void TestCreateSimulateData_Tianlongbabu()
         {
-            TFileOperate fileop = new TFileOperate();
-            fileop._tFileContentService = (TFileContentService)SpringManager.GetObject(SpringKeys.TFileContentService);
-            fileop._tFileService = (TFileService)SpringManager.GetObject(SpringKeys.TFileService);
-
-
-            fileop.CreateData("tianlongbabu.txt", 20, 2);
+            _fileOp.CreateData("tianlongbabu.txt", 20, 2);
+        }
+        [Test]
+        public void TestCreateSimulateData_SmallFile()
+        {
+            _fileOp.CreateData("smallfile.txt", 20, 2);
         }
     }
 }

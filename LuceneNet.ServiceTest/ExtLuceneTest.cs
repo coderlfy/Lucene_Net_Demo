@@ -32,14 +32,17 @@ namespace LuceneNet.ServiceTest
         public void Test_Query_Duanyu()
         {
             _lucene.CreateRamDirectory();
-            _lucene.Search("山西");
+            _lucene.Search("段誉");
         }
         [Test]
         public void Test_Query_Wangyuyan()
         {
             _lucene.CreateRamDirectory();
+            //未将“王语嫣”加入词典，所以搜索时无法检索到该姓名。
             _lucene.Search("王语嫣");
         }
+
+        #region old version
         /*
         /// <summary>
         /// 测试空字符串的查询
@@ -92,5 +95,6 @@ namespace LuceneNet.ServiceTest
             lucene.Search("learn");
         }
          * */
+        #endregion
     }
 }

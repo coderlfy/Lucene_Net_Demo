@@ -97,6 +97,9 @@
     <Content Include="lianchengjue.txt">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
+    <Content Include="smallfile.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
     <Content Include="tianlongbabu.txt">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>

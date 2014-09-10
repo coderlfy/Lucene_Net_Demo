@@ -76,6 +76,7 @@ namespace LuceneNet.Service
                     if (rowindex == this._rowCountPer)
                     {
                         addTFile(singletxt);
+                        singletxt.Clear();
                         rowindex = 0;
                         submitindex++;
 
@@ -92,10 +93,22 @@ namespace LuceneNet.Service
                     }
                     line = filereader.ReadLine();
                 }
+
+                if (this._tFiles.Count > 0)
+                {
+                    if(!String.IsNullOrEmpty(singletxt.ToString()))
+                        addTFile(singletxt);
+
+                    _tFileService.Add(this._tFiles);
+                    _tFileContentService.Add(this._tFileContents);
+                }
             }
             finally
             {
                 filereader.Close();
+                this._tFiles.Clear();
+                this._tFileContents.Clear();
+                singletxt.Clear();
             }
             #endregion
         }
