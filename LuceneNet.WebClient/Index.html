@@ -1,0 +1,81 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title></title>
+
+    <script src="ext/include-ext.js"></script>
+    <script type="text/javascript">
+
+        Ext.onReady(function () {
+            /*
+            Ext.define('Document', {
+                extend: 'Ext.data.Model',
+                fields: [
+                    { name: 'templateName', type: 'string' },
+                    { name: 'templateContent', type: 'string' }
+                ]
+            });
+            var officedocumenttemplatedata = Ext.create('Ext.data.Store', {
+                model: 'Document',
+                defaultPageSize: 15,
+                proxy: {
+                    type: 'ajax',
+                    //url: handerurl + 'list',
+                    actionMethods: { read: 'POST' },
+                    reader: { type: 'json', root: 'topics', totalProperty: 'total' }
+                }/*,
+                listeners: {
+                    beforeload: function () {
+                        Ext.apply(this.proxy.extraParams, this.lastOptions.params);
+                    }
+                },
+                autoLoad: true
+            });*/
+            var documentgrid = Ext.create('Ext.form.Panel', {
+                store: [],
+                columns: [
+                    { xtype: 'rownumberer', width: 35 },
+                    { text: "模板编号", dataIndex: 'templateId', sortable: true },
+                    { text: "模板内容或路径", dataIndex: 'templateContent', sortable: true }
+                ]
+                /*,
+                bbar: Ext.create('Ext.PagingToolbar', {
+                    itemId: 'pagingToolbar',
+                    store: officedocumenttemplatedata,
+                    displayInfo: true,
+                    displayMsg: '显示记录从 {0} - {1} 条  共 {2} 条记录。',
+                    emptyMsg: '没有内容可显示',
+                    plugins: [new Sys.App.PageSizePlugin()]
+                })*/
+            });
+
+            var documenttopwindow = Ext.create('Ext.window.Window', {
+                title: 'Lucene全文检索示例（数据源来自金庸所有小说）',
+                width: 800, 
+                height: 480,    
+                minWidth: 800,  
+                minHeight: 480, 
+                items: documentgrid,
+                dockedItems: [{
+                    dock: 'top',
+                    xtype: 'toolbar',
+                    items: [{
+                        fieldLabel: '请输入关键字',
+                        name: 'searchKeys',
+                        value: '段誉 王语嫣',
+                        width: 300,
+                        xtype: 'textfield'
+                    }, {
+                        text: '开始检索'
+                    }]
+                }]
+            });
+            documenttopwindow.show();
+        });
+    </script>
+</head>
+<body>
+
+</body>
+</html>

@@ -35,6 +35,8 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "test", "test", "{E64C853A-7
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LuceneNet.ServiceTest", "LuceneNet.ServiceTest\LuceneNet.ServiceTest.csproj", "{89434A65-5658-4164-AFAC-AFADFD10FDC4}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LuceneNet.WebClient", "LuceneNet.WebClient\LuceneNet.WebClient.csproj", "{9EB95824-2C36-4827-A59F-E395A643A6DD}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -85,6 +87,10 @@ Global
 		{89434A65-5658-4164-AFAC-AFADFD10FDC4}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{89434A65-5658-4164-AFAC-AFADFD10FDC4}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{89434A65-5658-4164-AFAC-AFADFD10FDC4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9EB95824-2C36-4827-A59F-E395A643A6DD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9EB95824-2C36-4827-A59F-E395A643A6DD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9EB95824-2C36-4827-A59F-E395A643A6DD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9EB95824-2C36-4827-A59F-E395A643A6DD}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -101,5 +107,6 @@ Global
 		{4DE64906-B976-4DE5-A7D3-35772DD086C1} = {DFFFC6F3-D887-497E-9F30-732A08561A5B}
 		{398B7FEE-94CD-4F66-A5B4-180F8E443C83} = {DFFFC6F3-D887-497E-9F30-732A08561A5B}
 		{89434A65-5658-4164-AFAC-AFADFD10FDC4} = {E64C853A-7779-43C2-B6BF-5884F88EFD58}
+		{9EB95824-2C36-4827-A59F-E395A643A6DD} = {DE7060AC-C649-4691-8474-CF35BB31D9D1}
 	EndGlobalSection
 EndGlobal
