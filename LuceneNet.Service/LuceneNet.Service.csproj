@@ -50,6 +50,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="ExtLucene.cs" />
+    <Compile Include="PanGuConfig.cs" />
     <Compile Include="TFileContentService.cs" />
     <Compile Include="TFileOperate.cs" />
     <Compile Include="TFileService.cs" />

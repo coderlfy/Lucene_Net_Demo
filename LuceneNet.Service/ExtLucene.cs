@@ -6,6 +6,7 @@ using Lucene.Net.Index;
 using Lucene.Net.Search;
 using Lucene.Net.Store;
 using LuceneNet.Model;
+using PanGu;
 using System;
 using System.Collections.Generic;
 using System.Data;
@@ -84,6 +85,39 @@ namespace LuceneNet.Service
                 Console.WriteLine("name: {0}", firstHit.GetField(TFileContentData.fid).StringValue());  
             }
             Console.WriteLine("*****************检索结束**********************");  
+            #endregion
+        }
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="queryString"></param>
+        /// <returns></returns>
+        public ICollection<WordInfo> SplitWords(
+            string queryString)
+        {
+            #region
+            PanGuConfig.Init();
+            Segment.Init();
+
+            Segment segment = new Segment();
+
+            ICollection<WordInfo> words = segment.DoSegment(
+                queryString, 
+                PanGuConfig._Options, 
+                PanGuConfig._Parameters);
+
+            StringBuilder wordsString = new StringBuilder();
+            foreach (WordInfo wordInfo in words)
+            {
+                if (wordInfo == null)
+                    continue;
+
+                wordsString.AppendFormat("{0}/", wordInfo.Word);
+            }
+
+            Console.WriteLine("分词结果：{0}", wordsString.ToString());
+
+            return words;
             #endregion
         }
     }
